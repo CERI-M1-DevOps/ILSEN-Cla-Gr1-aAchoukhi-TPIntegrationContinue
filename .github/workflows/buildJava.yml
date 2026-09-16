@@ -3,7 +3,7 @@ name: Java CI with Maven - Test and package
 on:
   pull_request:
     branches:
-      -main
+      - main
 
 jobs:
   Salutations:
@@ -15,4 +15,5 @@ jobs:
         with:
           distribution: corretto
           java-version: '21'
+      - name: Maven
         run: mvn -B package
