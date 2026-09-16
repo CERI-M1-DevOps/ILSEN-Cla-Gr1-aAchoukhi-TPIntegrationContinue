@@ -1,6 +1,9 @@
 name: Java CI with Maven - Test and package
 
-on: [pull]
+on:
+  pull_request:
+    branches:
+      -main
 
 jobs:
   name: Salutations
