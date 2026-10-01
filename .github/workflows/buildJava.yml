@@ -16,4 +16,6 @@ jobs:
           distribution: corretto
           java-version: '21'
       - name: Maven
+        env:
+          SONAR_TOKEN: "c37039cba8f3a66baab4f74c52b00ba322c1a8a9"
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
